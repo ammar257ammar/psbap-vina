@@ -23,7 +23,7 @@ for f in */; do
 
 		cd ../proteins/${f%/}
 
-		echo -e " ${f%/} \t ${p%.mol2} \t ${torsionLine//[!0-9]/} \t $(/usr/bin/time -f \"%e\t%P\" ( /vina/vina --config ${f%/}_config.txt --ligand /pdb/${PDB}/ligands/${p%.mol2}.pdbqt --out vina/${p%_min.mol2}/${p%.mol2}_docking.pdbqt --log vina/${p%_min.mol2}/${p%.mol2}_log.txt --seed $(cat ${f%/}_seed.txt) ) 2>&1 1>/dev/null )" >> /pdb/${PDB}/intensive-docking.log
+		echo -e "${f%/}\t${p%.mol2}\t${torsionLine//[!0-9]/} \t $(/usr/bin/time -f \"%e\t%P\" ( /vina/vina --config ${f%/}_config.txt --ligand /pdb/${PDB}/ligands/${p%.mol2}.pdbqt --out vina/${p%_min.mol2}/${p%.mol2}_docking.pdbqt --log vina/${p%_min.mol2}/${p%.mol2}_log.txt --seed $(cat ${f%/}_seed.txt) ) 2>&1 1>/dev/null )" >> /pdb/${PDB}/intensive-docking.log
 
 		cd ../../ligands
 

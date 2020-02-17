@@ -35,7 +35,7 @@ else
 
   	LIGAND_INFILE="-l $ligandFile";
 
-        ligandPdbqtFile="$(basename $ligandFile .mol2).pdbqt";
+        ligandPdbqtFile="${ligandFile%.mol2}.pdbqt";
 	#die "Error: Could not convert $ligandPdbqtFile .mol2 ligand file into .pdbqt"
         LIGAND_OUTFILE="-o $ligandPdbqtFile";
 

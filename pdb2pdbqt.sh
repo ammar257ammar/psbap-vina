@@ -53,7 +53,7 @@ else
 
   	INFILE="-r $proteinFile";
 
-        pdbqtFile="$(basename $proteinFile .pdb).pdbqt";
+        pdbqtFile="${proteinFile%.pdb}.pdbqt";
 
   	OUTFILE="-o $pdbqtFile";
 
