@@ -34,7 +34,7 @@ WORKDIR /vina
 
 RUN ls
 
-ENTRYPOINT ["./vina-ep.sh"]
+ENTRYPOINT ["./vina-ep-no-flex.sh"]
 
 
 
