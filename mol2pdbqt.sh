@@ -24,6 +24,9 @@ if [ $# -ne 1 ];then
 else
 
    	ligandFile=$1
+	COMMAND=$2
+
+	LIGAND_PARAMS=" "
 
    	if [[ ! -f $ligandFile ]];then
 	    die "File $ligandFile does not exist."
@@ -31,7 +34,20 @@ else
   
   	LIGAND_SCRIPT="$MGLTOOLS_LOCATION/MGLToolsPckgs/AutoDockTools/Utilities24/prepare_ligand4.py";
 
-  	LIGAND_PARAMS="-A bonds_hydrogens ";
+	if [[ "$COMMAND" == "repair" ]];then
+
+		LIGAND_PARAMS="-A bonds_hydrogens ";
+
+	elif [ "$COMMAND" == "no-repair" ]; then
+
+  		LIGAND_PARAMS=" ";
+
+	else
+
+		die "Error: command argument is wrong"		
+
+	fi
+
 
   	LIGAND_INFILE="-l $ligandFile";
 
