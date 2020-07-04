@@ -43,7 +43,7 @@ else
     # The next line removes all HETATMs, which I can only guess is intended to
     # delete a ligand if there happens to be one in the file. Be sure that your
     # protein does not contain atoms errantly marked as a HETATM.
-    sed -i '/^HETATM/d' $proteinFile
+    # sed -i '/^HETATM/d' $proteinFile
   
   	PYTHON_INTERPRETER="$MGLTOOLS_LOCATION/bin/pythonsh";
 
