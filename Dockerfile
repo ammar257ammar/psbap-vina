@@ -16,12 +16,12 @@ COPY autodock_vina_1_1_2_linux_x86.tgz ./
 COPY pdb2pdbqt.sh ./
 COPY mol2pdbqt.sh ./
 COPY vina-single-entry.sh ./
-COPY psbap-vina-0.0.1-SNAPSHOT-jar-with-dependencies.jar .
+COPY psnpbind-concurrency-vina-1.0-Stable-jar-with-dependencies.jar .
 
 RUN chmod 755 pdb2pdbqt.sh
 RUN chmod 755 mol2pdbqt.sh
 RUN chmod 755 vina-single-entry.sh
-RUN chmod 755 psbap-vina-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+RUN chmod 755 psnpbind-concurrency-vina-1.0-Stable-jar-with-dependencies.jar
 
 RUN tar vxfz autodock_vina_1_1_2_linux_x86.tgz
 RUN rm autodock_vina_1_1_2_linux_x86.tgz
@@ -41,7 +41,7 @@ WORKDIR /vina
 
 RUN ls
 
-ENTRYPOINT ["java", "-jar", "/vina/psbap-vina-0.0.1-SNAPSHOT-jar-with-dependencies.jar"]
+ENTRYPOINT ["java", "-jar", "/vina/psnpbind-concurrency-vina-1.0-Stable-jar-with-dependencies.jar"]
 CMD ["-h"]
 
 

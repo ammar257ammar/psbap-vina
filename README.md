@@ -1,15 +1,15 @@
-# AutoDock Vina Docker
+# PSnpBind AutoDock Vina Docker
 
-This repository is part of the "Pocket SNPs effect on protein-ligand Binding Affinity Prediction (PSBAP)" project and it is a submodule of the main repository 
+This repository is part of the "Pocket SNPs Effect On Protein-Ligand Binding Affinity Project (PSnpBind)" and it is a submodule of the main repository 
 
 https://github.com/ammar257ammar/pocket-snps-effect-binding-affinity
 
-Please prepare and build the docker using the following instruction and refer back to the previous link for proper usage in the context of PSBAP project.
+Please prepare and build the docker using the following instruction and refer back to the previous link for proper usage in the context of PSnpBind project.
 
-1. ### First, clone this repository, then follow next! 
+### First, clone this repository.
 
 
-### Download AutoDock Vina and related tools
+### Second, download AutoDock Vina and related tools
 
 1. Download AutoDock software from the following link
 
@@ -23,11 +23,11 @@ Please prepare and build the docker using the following instruction and refer ba
 
 4. Move the downloaded "gz" file to the cloned repository folder. 
 
-5. Go to the cloned repository folder "psbap-vina" with "cd" command and follow the instructions in the next section
+5. Go to the cloned repository folder "psnpbind-vina" with "cd" command and follow the instructions in the next section
 
 ### Build the Docker image
 
-docker build -t psbap-vina .
+docker build -t psnpbind-vina .
 
 #### Now you are ready! 
 
